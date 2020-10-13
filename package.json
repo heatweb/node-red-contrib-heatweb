@@ -1,0 +1,21 @@
+{
+    "name": "node-red-contrib-heatweb",
+    "version": "0.0.1",
+    "author": {
+      "name": "Richard Hanson-Graville",
+      "email": "admin@heatweb.com",
+      "url": "http://heatweb.co.uk"
+    },
+    "description"  : "A set of nodes for working with Heatweb.",
+    "dependencies": {
+    },
+    "deprecated": false,
+    "keywords": [ "node-red","heatweb","Thermal Integration","heat","heat networks" ],
+    "license": "Apache-2.0",
+    "node-red": {
+        "nodes": {
+            "heatwebNode": "heatwebNode/heatwebNode.js",
+            "heatwebFilter": "heatwebFilter/heatwebFilter.js"
+        }
+    }
+}

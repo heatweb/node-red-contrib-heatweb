@@ -1,0 +1,55 @@
+<script type="text/javascript">
+    RED.nodes.registerType('heatwebNode',{
+        category: 'heatweb',
+        color: '#cc88ee',
+        defaults: {
+            name: {value:""},
+            url: {value:"https://hw3.ddns.net"},
+            nodeId: {value:"", required:true, validate:RED.validators.regex(/[a-z,A-Z,0-9]+/)},
+            networkId: {value:"", required:true, validate:RED.validators.regex(/[a-z,A-Z,0-9]+/)},
+            localNetworkId: {value:"local", required:true, validate:RED.validators.regex(/[a-z,A-Z,0-9]+/)},
+            localDirectory: {value:"/home/pi/node-hiu"}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "font-awesome/fa-database",
+        align: "left",
+        paletteLabel: "Heatweb Connect",
+        label: function() {
+            return this.name||"Heatweb Connect";
+        }
+    });
+</script>
+
+<script type="text/html" data-template-name="heatwebNode">
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-url"><i class="fa fa-tag"></i>Heatweb URL</label>
+        <input type="text" id="node-input-url" placeholder="https://hw3.ddns.net">
+    </div>
+    <div class="form-row">
+        <label for="node-input-nodeId"><i class="fa fa-tag"></i>Node ID</label>
+        <input type="text" id="node-input-nodeId" placeholder="E.g. A24cf5623">
+    </div>
+    <div class="form-row">
+        <label for="node-input-networkId"><i class="fa fa-tag"></i>External Network ID</label>
+        <input type="text" id="node-input-networkId" placeholder="E.g. myNetwork">
+    </div>
+    <div class="form-row">
+        <label for="node-input-localNetworkId"><i class="fa fa-tag"></i>Local Network ID</label>
+        <input type="text" id="node-input-localNetworkId" placeholder="ihiu">
+    </div>
+    <div class="form-row">
+        <label for="node-input-localDirectory"><i class="fa fa-tag"></i>Local Directory</label>
+        <input type="text" id="node-input-localDirectory" placeholder="/home/pi/node-hiu">
+    </div>
+
+</script>
+
+<script type="text/html" data-help-name="heatwebNode">
+    <p>Connection to Heatweb Services</p>
+</script>
+
