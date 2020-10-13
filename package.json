@@ -9,6 +9,7 @@
     "description"  : "A set of nodes for working with Heatweb.",
     "dependencies": {
     },
+    "publishConfig": { "registry": "https://npm.pkg.github.com/" },
     "deprecated": false,
     "keywords": [ "node-red","heatweb","Thermal Integration","heat","heat networks" ],
     "license": "Apache-2.0",
